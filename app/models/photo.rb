@@ -18,6 +18,6 @@ class Photo < ApplicationRecord
   has_many(:likes, { :class_name => "Like", :foreign_key => "photo_id", :dependent => :destroy })
   has_many(:authors, { :through => :comments, :source => :author })
 
-  mount_uploader :image, ImageUploader
+  #mount_uploader :image, ImageUploader
 
 end
